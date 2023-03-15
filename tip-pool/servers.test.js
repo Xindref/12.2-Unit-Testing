@@ -12,7 +12,6 @@ describe("Servers test (with setup and tear-down)", function () {
   });
 
   it('should make changes to server table on updateServerTable()', function () {
-    serverNameInput.value = 'Alice';
     submitServerInfo();
     expect(serverTbody.innerHTML).not.toEqual('');
   })
