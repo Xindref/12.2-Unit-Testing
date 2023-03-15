@@ -26,11 +26,20 @@ describe('helpers test', function () {
         appendTd(paymentTbody, 40);
         expect(paymentTbody.firstChild.innerText).toEqual('40');
     })
+    it('should add a button with an X value to tr', function () {
+        appendTd(paymentTbody, 40);
+        appendDeleteBtn(paymentTbody.firstChild)
+        expect(paymentTbody.firstChild.innerText).toEqual('40X');
+    })
     afterEach(function () {
         allPayments = {};
+        allServers = {};
         paymentTbody.innerHTML = '';
         billAmtInput.value = '';
         tipAmtInput.value = '';
+        paymentId = 0;
+        serverId = 0;
+        updateServerTable();
         updateSummary();
     })
 })

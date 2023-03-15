@@ -18,6 +18,7 @@ describe("Servers test (with setup and tear-down)", function () {
 
   afterEach(function () {
     allServers = {};
+    serverId = 0;
     updateServerTable();
   });
 });

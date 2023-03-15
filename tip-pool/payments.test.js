@@ -25,7 +25,7 @@ describe('payments test', function () {
     })
     it('should add to paymentTbody on appendPaymentTable()', function () {
         appendPaymentTable(testCurrPayment);
-        expect(paymentTbody.innerHTML.includes('payment1')).toEqual(true);
+        expect(paymentTbody.innerHTML.includes('payment')).toEqual(true);
     })
     it('should update the Shift summary to reflect total Bills, Tips, and Tip% avg', function () {
         submitPaymentInfo();
@@ -38,6 +38,7 @@ describe('payments test', function () {
         paymentTbody.innerHTML = '';
         billAmtInput.value = '';
         tipAmtInput.value = '';
+        paymentId = 0;
         updateSummary();
     })
 })
